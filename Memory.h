@@ -5,6 +5,7 @@
 
 class Memory {
 public:
+  Memory(const char* windowName, const char* executableName) { throw std::invalid_argument( "Dont use this constructor" ); }
   Memory(std::string procName) {
     pid = getProcIdByName(procName);
     getBase(procName);
